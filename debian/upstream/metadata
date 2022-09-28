@@ -1,0 +1,24 @@
+Name: AvogadroLibs
+Bug-Database: https://github.com/OpenChemistry/avogadrolibs/issues
+Reference:
+ - Author: Marcus D Hanwell and Donald E Curtis and David C Lonie and Tim Vandermeersch and Eva Zurek and Geoffrey R Hutchison
+   Title: "Avogadro: An advanced semantic chemical editor, visualization, and analysis platform"
+   Journal: J. Cheminf.
+   Year: 2012
+   Volume: 4
+   Pages: 17
+   DOI: 10.1186/1758-2946-4-17
+   URL: http://www.jcheminf.com/content/4/1/17
+   eprint: http://www.jcheminf.com/content/pdf/1758-2946-4-17.pdf
+Cite-As: "Avogadro: an open-source molecular builder and visualization tool. Version 2.XX. http://openchemistry.org/avogadro2"
+Contact: openchemistry-developers@public.kitware.com
+Repository: https://github.com/OpenChemistry/avogadrolibs.git
+Repository-Browse: https://github.com/OpenChemistry/avogadrolibs
+Screenshots: http://openchemistry.org/avogadro2
+Registry:
+ - Name: bio.tools
+   Entry: Avogadro
+ - Name: OMICtools
+   Entry: OMICS_04967
+ - Name: SciCrunch
+   Entry: SCR_015983

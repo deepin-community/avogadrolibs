@@ -1,0 +1,174 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: avogadrolibs
+Source: https://github.com/OpenChemistry/avogadrolibs
+
+Files: *
+Copyright: 2011-2018, Kitware, Inc.
+License: BSD-3-clause
+
+Files: i18n/*.po
+Copyright: 2008-2015 Rosetta Contributors and Canonical Ltd
+License: BSD-3-clause
+Comment:
+ These files are distributed under the same license as the avogadro package.
+
+Files: i18n/de.po
+Copyright: 2016, 2018 Ivan Panchenko <pivan@opmbx.org>
+License: BSD-3-clause
+
+Files: i18n/fr.po
+Copyright: 2017, 2018 Jean-Marc
+License: BSD-3-clause
+
+Files: i18n/gl.po
+Copyright: 2006-2010 The Avogadro Project,
+ 2010 Marce Villarino <mvillarino@gmail.com>,
+ 2016, 2018 Miguel Anxo Bouzada <mbouzada@gmail.com>
+License: BSD-3-clause
+Comment:
+ This file is distributed under the same license as the Avogadro package.
+
+Files: thirdparty/gif-h/*
+Copyright: Charlie Tangora <ctangora -at- gmail -dot- com>
+License: public-domain
+
+Files: thirdparty/libgwavi/*
+Copyright: 2008-2011, Michael Kohn
+ 2013, Robin Hahling "Rolinh" <robin.hahling@gw-computing.net>
+License: BSD-3-clause
+
+Files: thirdparty/nlohmann/*
+Copyright: 2013-2018, Niels Lohmann <http://nlohmann.me>
+License: MIT
+
+Files: thirdparty/pugixml/*
+Copyright: 2003, Kristen Wegner <kristen@tima.net>
+ 2006-2012, Arseny Kapoulkine <arseny.kapoulkine@gmail.com>
+License: MIT
+Comment:
+ Report bugs and download new versions at http://pugixml.org/
+
+Files: thirdparty/struct/*
+Copyright: 2015, wonseok choi <svperbeast@gmail.com>
+License: MIT
+
+Files: debian/*
+Copyright: 2019 debichem team <debichem-devel@lists.alioth.debian.org>
+License: GPL-3+
+
+Files: debian/data/molecules/*
+Copyright: 2003, Geoffrey Hutchison, University of Pittsburgh
+License: BSD-3-clause
+Comment:
+ Pulled from https://github.com/openchemistry/molecules
+
+Files: debian/data/crystals/*
+Copyright: Wyckoff, R. W. G.;
+ Bailey S W; Baldinozzi, G; Bayliss, P.; Bernal, J D; Billy, M; Bish D L;
+ Bolzan, A. A.; Boysen, H.; Bragg, W L; Brock, C. P.; Brostigen, G;
+ Bundy F P; Caracas, R.; Dainyak L G; Desgranges, L.; Downs, R. T.;
+ Dusek, M.; Effenberger, H.; Engelhardt H; Ferraris, G.; Fleet, M. E.;
+ Gallacher, A. C.; Giustetto R; Gualtieri A F; Hawthorne, F. C.;
+ Hendricks, S. B.; Henry, Paul F.; Hill, R. J.; Jacobsen S D;
+ Jacobsen, S. D.; Joseph, J.; Kamb B; Kihara, K.; Laschkarew, W E;
+ Leciejewicz, J.; Lee J H; Lengauer, C.L.; Levien, L.; Liu, X.;
+ Lundstroem, T.; Mandel, N.; Mark, H; McDonald, W. S.; McFarlan R;
+ Millard, R. L.; Milligan, W O; Mir, M.; Mitchell, R. H.;
+ Mueller-Buschbaum, Hk; Muller, O; Nakajima, S.; Newnham, R. E.;
+ Niggli, P; Oftedal, I; Ott, H; Pauling, L; Redfern, S. A. T.;
+ Reeder, R. J.; Rentzeperis, P J; Rettig, S. J.; Sartori F; Scavnicar, S.;
+ Shklover, V.; Sitepu, H.; Skinner, B. J.; Smith, G. S.; Spedding, F. H.;
+ Steidel, J.; Tazzoli, V.; Templeton, L. K.; Tideswell, N. W.; Trolard F;
+ Vezzalini, G.; Viani, A.; Wahle M W; Waser, J.; Will, G; Williams, A;
+ Wooster, N; Zachariasen, W H; Zheng H; Zhukhlistov A P
+License: public-domain
+Comment:
+ Pulled from https://github.com/openchemistry/crystals
+ .
+ All files are available in the public domain, although most include
+ citation information for the original structure.
+ .
+ All Zeolites are available from the [International Zeolite
+ Association (IZA) Structure
+ Commission](http://www.iza-structure.org/databases/).
+ .
+ All other crystal structures are available through the
+ [Crystallographic Open Database](http://crystallography.net/cod/).
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+ .
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+ .
+    * Neither the name of the Avogadro project nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL KITWARE, INC.
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: public-domain
+ This is free and unencumbered software released into the public domain.
+ .
+ Anyone is free to copy, modify, publish, use, compile, sell, or
+ distribute this software, either in source code form or as a compiled
+ binary, for any purpose, commercial or non-commercial, and by any
+ means.
+ .
+ In jurisdictions that recognize copyright laws, the author or authors
+ of this software dedicate any and all copyright interest in the
+ software to the public domain. We make this dedication for the
+ benefit of the public at large and to the detriment of our heirs and
+ successors. We intend this dedication to be an overt act of
+ relinquishment in perpetuity of all present and future rights to this
+ software under copyright law.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ For more information, please refer to <http://unlicense.org>
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+License: GPL-3+
+ See /usr/share/common-licenses/GPL-3

@@ -1,0 +1,7 @@
+script_hashbang.patch
+qtplugins_insertfragment.patch
+nolayer_PR806.patch
+use_overlayaxes.patch
+test_mostly_zero.patch
+molequeue_system.patch
+fix_test_qtgui.patch

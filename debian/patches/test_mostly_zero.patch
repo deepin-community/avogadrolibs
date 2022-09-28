@@ -1,0 +1,27 @@
+Index: avogadrolibs/tests/core/unitcelltest.cpp
+===================================================================
+--- avogadrolibs.orig/tests/core/unitcelltest.cpp	2021-01-02 13:36:30.367504747 +0100
++++ avogadrolibs/tests/core/unitcelltest.cpp	2021-10-10 18:29:47.172861526 +0200
+@@ -15,6 +15,7 @@
+ ******************************************************************************/
+ 
+ #include <gtest/gtest.h>
++#include <limits>
+ 
+ #include <avogadro/core/array.h>
+ #include <avogadro/core/crystaltools.h>
+@@ -260,11 +261,11 @@
+   for (std::vector<Vector3>::const_iterator it = fcoords.begin(),
+                                             itEnd = fcoords.end();
+        it != itEnd; ++it) {
+-    EXPECT_GE(it->x(), static_cast<Real>(0.0));
++    EXPECT_GE(it->x(), static_cast<Real>(-std::numeric_limits<Real>::epsilon())); // x >= 0, "mostly" zero
+     EXPECT_LE(it->x(), static_cast<Real>(1.0));
+-    EXPECT_GE(it->y(), static_cast<Real>(0.0));
++    EXPECT_GE(it->y(), static_cast<Real>(-std::numeric_limits<Real>::epsilon())); // y >= 0, "mostly" zero
+     EXPECT_LE(it->y(), static_cast<Real>(1.0));
+-    EXPECT_GE(it->z(), static_cast<Real>(0.0));
++    EXPECT_GE(it->z(), static_cast<Real>(-std::numeric_limits<Real>::epsilon())); // z >= 0, "mostly" zero
+     EXPECT_LE(it->z(), static_cast<Real>(1.0));
+   }
+ }

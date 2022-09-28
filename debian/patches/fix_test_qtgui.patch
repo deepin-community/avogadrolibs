@@ -1,0 +1,13 @@
+Index: avogadrolibs/tests/qtgui/CMakeLists.txt
+===================================================================
+--- avogadrolibs.orig/tests/qtgui/CMakeLists.txt	2021-08-30 00:44:32.045180250 +0200
++++ avogadrolibs/tests/qtgui/CMakeLists.txt	2021-10-15 19:15:11.296461817 +0200
+@@ -49,7 +49,7 @@
+ 
+ # Add a single executable for all of our tests.
+ add_executable(AvogadroQtGuiTests ${testSrcs})
+-target_link_libraries(AvogadroQtGuiTests AvogadroQtGui AvogadroMoleQueue
++target_link_libraries(AvogadroQtGuiTests AvogadroQtGui AvogadroMoleQueue AvogadroCore
+   MoleQueueClient ${GTEST_BOTH_LIBRARIES} ${EXTRA_LINK_LIB} Qt5::Widgets Qt5::Test)
+ 
+ # Now add all of the tests, using the gtest_filter argument so that only those

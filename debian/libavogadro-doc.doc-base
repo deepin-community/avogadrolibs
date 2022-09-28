@@ -1,0 +1,10 @@
+Document: avogadrolib
+Title: Avogadro Library documentation
+Author: Kitware, Inc.
+Abstract: This manual describes how to use the
+ libraries of Avogadro 2.
+Section: Science/Chemistry
+
+Format: HTML
+Index: /usr/share/doc/libavogadro-dev/html/index.html
+Files: /usr/share/doc/libavogadro-dev/html/*.html

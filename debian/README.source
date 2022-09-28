@@ -1,0 +1,17 @@
+avogadro/qtplugins/insertfragment enables entire fragments to be added
+when building a molecule.
+
+Data for the fragments is maintained in 
+  https://github.com/openchemistry/molecules
+  https://github.com/openchemistry/crystals
+
+These data sets are made accessible for the debian build as git
+subtrees in the debian folder.
+
+(A git subtree is simpler to manage than a git submodule for simple
+copies that not expected to be pushed back upstream)
+
+The molecules and crystals data sets can be updated with
+
+  git subtree pull --prefix debian/data/molecules https://github.com/openchemistry/molecules master --squash
+  git subtree pull --prefix debian/data/crystals https://github.com/openchemistry/crystals master --squash

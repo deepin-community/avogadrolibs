@@ -1,0 +1,4 @@
+Tests: test-avogadrolibs-cpp
+Depends: @, @builddeps@,
+ libgtest-dev
+Restrictions: allow-stderr

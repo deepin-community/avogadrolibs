@@ -1,0 +1,33 @@
+Index: avogadrolibs/avogadro/qtplugins/insertfragment/CMakeLists.txt
+===================================================================
+--- avogadrolibs.orig/avogadro/qtplugins/insertfragment/CMakeLists.txt	2021-08-18 11:26:43.068490353 +0200
++++ avogadrolibs/avogadro/qtplugins/insertfragment/CMakeLists.txt	2021-08-18 11:28:19.244871764 +0200
+@@ -13,8 +13,8 @@
+ 
+ # Install the fragments & crystals
+ # TODO - make this a for loop
+-set(_molecules "${AvogadroLibs_SOURCE_DIR}/../molecules")
+-set(_crystals "${AvogadroLibs_SOURCE_DIR}/../crystals")
++set(_molecules "${AvogadroLibs_SOURCE_DIR}/debian/data/molecules")
++set(_crystals "${AvogadroLibs_SOURCE_DIR}/debian/data/crystals")
+ 
+ # Look in parallel directory for the molecule fragment repository
+ if(NOT EXISTS "${_molecules}")
+@@ -29,7 +29,7 @@
+ )
+ endif()
+ 
+-install(DIRECTORY "${AvogadroLibs_SOURCE_DIR}/../molecules"
++install(DIRECTORY "${AvogadroLibs_SOURCE_DIR}/debian/data/molecules"
+   DESTINATION "${INSTALL_DATA_DIR}/avogadro2"
+   PATTERN ".git" EXCLUDE
+ )
+@@ -47,7 +47,7 @@
+ )
+ endif()
+ 
+-install(DIRECTORY "${AvogadroLibs_SOURCE_DIR}/../crystals"
++install(DIRECTORY "${AvogadroLibs_SOURCE_DIR}/debian/data/crystals"
+ DESTINATION "${INSTALL_DATA_DIR}/avogadro2"
+ PATTERN ".git" EXCLUDE
+ )

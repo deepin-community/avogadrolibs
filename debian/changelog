@@ -1,0 +1,230 @@
+avogadrolibs (1.95.1-5) unstable; urgency=medium
+
+  * add molequeue support
+    - adds quantum chemical input support (cp2k, gamess)
+    - drop debian patch drop_cp2kinput.patch
+    - Build-Depends: molequeue, libmolequeue-dev,
+      libavogadro2-1 Recommends: molequeue.
+      molequeue is used by libAvogadroMoleQueue.so.1 when available,
+      avogadrolibs tests use libmolequeue-dev for molequeue cmake scripts
+    - debian patch molequeue_system.patch builds against system
+      molequeue instead of vendored molequeue client headers.
+  * add qtgui tests in debian/tests
+    - debian patch fix_test_qtgui.patch fixes linked libraries in
+      tests/qtgui
+
+ -- Drew Parsons <dparsons@debian.org>  Fri, 15 Oct 2021 22:42:02 +0200
+
+avogadrolibs (1.95.1-4) unstable; urgency=medium
+
+  * debian patch test_mostly_zero.patch tests ">=0" within machine
+    precision, i.e. ">=-EPS". Required for i386 to pass
+    UnitCellTest.wrapAtomsToUnitCell, see upstream Issue #812.
+
+ -- Drew Parsons <dparsons@debian.org>  Sun, 10 Oct 2021 18:32:36 +0200
+
+avogadrolibs (1.95.1-3) unstable; urgency=medium
+
+  * debian patch use_overlayaxes.patch skips the overlayaxes plugin on
+    armel,armhf. Qt/GL support is broken on armel,armhf, see Bug#798408
+    and the problem is triggered by the overlayaxes plugin.
+
+ -- Drew Parsons <dparsons@debian.org>  Sat, 09 Oct 2021 03:01:34 +0200
+
+avogadrolibs (1.95.1-2) unstable; urgency=medium
+
+  * debian patch nolayer_PR806.patch applies upstream PR#806 to fix
+    handling molecules with no layers. Intended to fix spglib segfault
+    (upstream Issue#752)
+
+ -- Drew Parsons <dparsons@debian.org>  Tue, 05 Oct 2021 11:53:07 +0200
+
+avogadrolibs (1.95.1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - applies debian patches
+       fix_SMILES_PR661.patch
+       fix_transparency_PR656.patch
+       insert_crystals_PR658.patch
+       insert_crystals_PR659.patch
+       read_nonstandard_pdb_PR647.patch
+  * Standards-Version: 4.6.0
+  * Build-Depends: python3:any | python3-all:any | python3-dev:any |
+     python3-all-dev:any | dh-sequence-python3.
+    For lintian warning missing-build-dependency-for-dh-addon
+  * download libavogadro2-1 Depends to Recommends: python3:any
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 04 Oct 2021 16:14:46 +0200
+
+avogadrolibs (1.94.0-6) experimental; urgency=medium
+
+  * debian patches insert_crystals_PR658.patch and
+    insert_crystals_PR659.patch apply upstream PR#658 and PR#659
+    to activate Insert Fragment for crystals.
+  * debian patch fix_SMILES_PR661.patch fixes random failure to insert
+    SMILES molecules. Note 'H' is not supported in the SMILES format.
+
+ -- Drew Parsons <dparsons@debian.org>  Fri, 09 Jul 2021 18:24:16 +0200
+
+avogadrolibs (1.94.0-5) experimental; urgency=medium
+
+  * debian patch read_nonstandard_pdb_PR647.patch applies upstream
+    PR#646 allowing nonstandard pdb files to be read.
+
+ -- Drew Parsons <dparsons@debian.org>  Fri, 09 Jul 2021 00:45:47 +0200
+
+avogadrolibs (1.94.0-4) experimental; urgency=medium
+
+  * debian patch fix_transparency_PR656.patch applies upstream PR#656
+    to fix transparency of selections.
+  * reinstate debian/tmp/html in debian/not-installed. It's installed
+    by dh_installdocs not dh_install, dh_missing does not know about
+    doc installations.
+
+ -- Drew Parsons <dparsons@debian.org>  Thu, 08 Jul 2021 20:59:47 +0200
+
+avogadrolibs (1.94.0-3) experimental; urgency=medium
+
+  * libavogadro-data: install molecules and crystals data directly
+    from source in debian/data to enable arch-indep builds
+
+ -- Drew Parsons <dparsons@debian.org>  Tue, 06 Jul 2021 18:49:26 +0200
+
+avogadrolibs (1.94.0-2) experimental; urgency=medium
+
+  * libavogadro-dev Depends: libglvnd-dev
+    Needed to provide libOpenGL.so (libopengl-dev) and other
+    INTERFACE_LINK_LIBRARIES listed in cmake config scripts.
+
+ -- Drew Parsons <dparsons@debian.org>  Tue, 06 Jul 2021 17:47:53 +0200
+
+avogadrolibs (1.94.0-1) experimental; urgency=medium
+
+  * New upstream release.
+    - Build-Depends: python3-skbuild, python3-wheel, libqt5svg5-dev
+    - applies debian patches export_molecule_save_68fb007.patch,
+      fix_spglib_include_path.patch, patch_version_1.93.1.patch
+  * Build-Depends: libjs-mathjax. Use local copy of mathjax.js in docs.
+  * libavogadro-data package provides molecules and crystals for the
+    insertfragment plugin
+    - provided in source as git subtrees in debian/data.
+    - debian patch qtplugins_insertfragment.patch enables build access
+  * libavogadro2-1 Recommends: python3-cclib
+    (used by formatScripts/cclibScript.py)
+
+ -- Drew Parsons <dparsons@debian.org>  Tue, 29 Jun 2021 03:32:59 +0200
+
+avogadrolibs (1.93.1-3) unstable; urgency=medium
+
+  * debian patch export_molecule_save_68fb007.patch applies upstream
+    commit 68fb007 (PR#517) to fix the Save dialog when exporting
+    molecules (upstream issue #439).
+
+ -- Drew Parsons <dparsons@debian.org>  Wed, 14 Apr 2021 22:48:26 +0200
+
+avogadrolibs (1.93.1-2) unstable; urgency=medium
+
+  * bring new upstream release into bullseye
+
+ -- Drew Parsons <dparsons@debian.org>  Sat, 27 Feb 2021 19:04:09 +0100
+
+avogadrolibs (1.93.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * debian patch patch_version_1.93.1.patch fixes upstream
+    CMakeLists.txt to register version as 1.93.1 not 1.93.0.
+
+ -- Drew Parsons <dparsons@debian.org>  Thu, 25 Feb 2021 18:23:37 +0100
+
+avogadrolibs (1.93.0+git20201104.926573b-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Standards-Version: 4.5.1
+  * use help2man to generate man pages for avobabel and qube
+    (help2man -N -n "utility for Avogadro2" -S Avogadro2 
+      --version-string='\0' avobabel > avobabel.1)
+
+ -- Drew Parsons <dparsons@debian.org>  Sun, 03 Jan 2021 01:33:43 +1100
+
+avogadrolibs (1.93.0+git20200509.e169315-1) unstable; urgency=medium
+
+  * New upstream snapshot
+    - fixes H atom handling during geometry optimization.
+    - supports Python3 (drop debian patch build_python3.patch)
+  * mark libavogadro-dev as Multi-Arch: same
+  * add debian patches:
+    - drop_cp2kinput.patch drops the cp2k input plugin,
+      since it requires molequeue (upstream Issue#476)
+    - script_hashbang.patch adds hashbang to executable plugin script
+      libavogadro2-1 Depends: python3 to use it
+  * libAvogadroCore*.a static libraries not longer built
+  * debian/rules: include /usr/share/dpkg/architecture.mk
+  * Build-Depends: qttools5-dev (for Qt linguist and its Find cmake file)
+  * debhelper compatibility level 13
+
+ -- Drew Parsons <dparsons@debian.org>  Wed, 03 Jun 2020 20:16:28 +0800
+
+avogadrolibs (1.93.0-3) unstable; urgency=medium
+
+  * debian/tests Depends: libgtest-dev
+
+ -- Drew Parsons <dparsons@debian.org>  Wed, 12 Feb 2020 10:54:55 +0800
+
+avogadrolibs (1.93.0-2) unstable; urgency=medium
+
+  * add debian/tests for autopkgtest (currently tests C++ only)
+
+ -- Drew Parsons <dparsons@debian.org>  Tue, 11 Feb 2020 13:46:16 +0800
+
+avogadrolibs (1.93.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.5.0
+
+ -- Drew Parsons <dparsons@debian.org>  Thu, 06 Feb 2020 11:59:39 +0800
+
+avogadrolibs (1.92.1-5) unstable; urgency=medium
+
+  * mark libavogadro2-1 as Multi-Arch: same,
+    and libavogadro-doc as Multi-Arch: foreign
+  * Depends: openbabel not libopenbabel-dev. Closes: #948769.
+
+ -- Drew Parsons <dparsons@debian.org>  Fri, 17 Jan 2020 18:41:21 +0800
+
+avogadrolibs (1.92.1-4) unstable; urgency=medium
+
+  * build dir uses DEB_HOST_GNU_TYPE not DEB_HOST_MULTIARCH
+
+ -- Drew Parsons <dparsons@debian.org>  Tue, 31 Dec 2019 10:31:32 +1100
+
+avogadrolibs (1.92.1-3) unstable; urgency=medium
+
+  * configure to build documentation only for arch-indep builds
+
+ -- Drew Parsons <dparsons@debian.org>  Tue, 31 Dec 2019 00:51:38 +1100
+
+avogadrolibs (1.92.1-2) unstable; urgency=medium
+
+  * debian/copyright: explicitly declare licences of i18n .po
+    translation files.
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 30 Dec 2019 11:48:13 +1100
+
+avogadrolibs (1.92.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #942397)
+    - This is Avogadro 2, which is a rewrite of the original Avogadro.
+      Hence name binary library package as libavogadro2-1 to
+      distinguish from the older libavogadro1.
+    - utility programs provided in avogadro-utils:
+        avobabel
+        avocjsontocml
+        bodrparse
+        encodefile
+        qube
+        resdataparse
+    - documentation for libavogadro provided in libavogadro-doc
+  * debian patch fix_spglib_include_path.patch fixes path to spglib.h
+  * debian patch build_python3.patch enforces a Python3 build
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 28 Oct 2019 23:45:44 +0800

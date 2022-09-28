@@ -1,0 +1,4 @@
+usr/share/doc/AvogadroLibs/avogadrolibs/*
+usr/share/avogadro2/crystals/*
+usr/share/avogadro2/molecules/*
+debian/tmp/html

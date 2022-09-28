@@ -1,0 +1,14 @@
+set -e
+
+TESTDIR=tests/run_test
+
+mkdir $TESTDIR
+cd $TESTDIR
+
+cmake -DAvogadroLibs_BINARY_DIR=/usr/include/ -DUSE_QT=ON -Wno-dev ..
+
+make AvogadroTests VERBOSE=1
+./core/AvogadroTests
+
+make AvogadroQtGuiTests VERBOSE=1
+./qtgui/AvogadroQtGuiTests

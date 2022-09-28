@@ -1,0 +1,27 @@
+Index: avogadrolibs/CMakeLists.txt
+===================================================================
+--- avogadrolibs.orig/CMakeLists.txt	2021-08-30 00:44:31.977195825 +0200
++++ avogadrolibs/CMakeLists.txt	2021-10-09 02:45:59.308193466 +0200
+@@ -60,6 +60,7 @@
+ option(USE_MMTF "Enable optional features using mmtf" ON)
+ option(USE_PROTOCALL "Enable libraries that use ProtoCall" OFF)
+ option(USE_PYTHON "Use Python to wrap some of our API" OFF)
++option(USE_OVERLAYAXES "Enable OverlayAxes plugin" ON)
+ 
+ add_subdirectory(utilities)
+ add_subdirectory(thirdparty)
+Index: avogadrolibs/avogadro/qtplugins/CMakeLists.txt
+===================================================================
+--- avogadrolibs.orig/avogadro/qtplugins/CMakeLists.txt	2021-10-09 02:43:02.639301456 +0200
++++ avogadrolibs/avogadro/qtplugins/CMakeLists.txt	2021-10-09 02:44:43.791810046 +0200
+@@ -163,7 +163,9 @@
+ add_subdirectory(wireframe)
+ add_subdirectory(force)
+ add_subdirectory(meshes)
+-add_subdirectory(overlayaxes)
++if (USE_OVERLAYAXES)
++  add_subdirectory(overlayaxes)
++endif()
+ add_subdirectory(vanderwaalsao)
+ if (USE_PROTOCALL)
+   add_subdirectory(clientserver)
